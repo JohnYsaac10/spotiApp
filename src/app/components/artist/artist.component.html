@@ -1,0 +1,53 @@
+<app-loading *ngIf="opt"></app-loading>
+
+<div class="row" *ngIf="!opt">
+    <div class="col-2">
+        <img [src]="artistDetail.images | noImage" alt="" class="img-thumbnail img-circle">
+    </div>
+
+    <div class="col">
+        <h3> {{ artistDetail.name }}</h3>
+        <p>
+            <a [href]="artistDetail.external_urls.spotify" target="_blank" class="card-link">go to the artist's page</a>
+        </p>
+        <span class="badge badge-light" *ngFor="let genre of artistDetail.genres">
+            {{ genre }}
+        </span>
+        <p>
+            <span class="badge badge-info">followers: {{ artistDetail.followers.total | number }}</span>
+        </p>
+
+    </div>
+
+    <div class="col-4">
+        <button class="btn btn-outline-danger" routerLink="/search">
+            Back
+        </button>
+    </div>
+</div>
+
+<div class="row mt-5">
+
+    <div class="col text-white">
+        <table class="table">
+            <thead>
+                <tr class="text-white">
+                    <th>Cover Image</th>
+                    <th>Album</th>
+                    <th>Song</th>
+                    <th>Preview</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let track of topTracks" class="text-white">
+                    <td><img [src]="track.album.images | noImage" alt="" width="70" height="70"></td>
+                    <td>{{ track.album.name }}</td>
+                    <td>{{ track.name }}</td>
+                    <td><iframe [src]="track.uri | domseguro: 'https://open.spotify.com/embed?uri='" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></td>
+                </tr>
+            </tbody>
+
+
+        </table>
+    </div>
+</div>
