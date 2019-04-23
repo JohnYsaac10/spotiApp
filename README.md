@@ -4,6 +4,16 @@
 
 # ApiSpotify
 
+hear music!
+![spotiapp2](https://user-images.githubusercontent.com/22550929/56621794-84bdcb80-65f3-11e9-8cd3-ee36849f8cce.png)
+
+
+recent releases
+![spotiapp-image](https://user-images.githubusercontent.com/22550929/56621856-bb93e180-65f3-11e9-8705-db5adb0f2b8b.png)
+
+
+search your artist!
+![spotiapp22](https://user-images.githubusercontent.com/22550929/56622067-483e9f80-65f4-11e9-9240-74530df0ed7a.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server
